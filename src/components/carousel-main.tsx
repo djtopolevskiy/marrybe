@@ -39,9 +39,11 @@ export function CarouselMain() {
 							<Card className='border-none bg-transparent shadow-none'>
 								<CardContent className='flex aspect-square items-center justify-center p-6'>
 									<Image
-										src={`mainboard/mainboard_${index + 1}.png`}
+										src={`/mainboard/mainboard_${index + 1}.png`}
 										alt={`Image ${index + 1}`}
-										className='rounded-2xl mb-4 border-[3px] border-foreground'
+										className='rounded-2xl mb-4 border-[3px] border-foreground w-full h-full object-cover object-center'
+										width={1000}
+										height={1000}
 									/>
 								</CardContent>
 							</Card>
