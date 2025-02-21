@@ -1,63 +1,122 @@
 export const categories = [
-	{ name: "freshdrinks" },
-	{ name: "cakes" },
-	{ name: "cafes" },
-	{ name: "desserts" },
+	{ name: 'freshdrinks' },
+	{ name: 'cakes' },
+	{ name: 'cafes' },
+	{ name: 'desserts' },
 ]
 
 export const ingredients = [
 	{
-		name: "apple",
+		name: 'apple',
 		price: 10,
-		imageUrl: "/menu/fruitapple.jpeg",
+		imageUrl: '/menu/fruitapple.jpeg',
 	},
 	{
-		name: "grapefruit",
+		name: 'grapefruit',
 		price: 15,
-		imageUrl: "/menu/fruitgrape.jpeg",
+		imageUrl: '/menu/fruitgrape.jpeg',
 	},
 	{
-		name: "carrot",
+		name: 'carrot',
 		price: 10,
-		imageUrl: "/menu/fruitcarrot.jpeg",
+		imageUrl: '/menu/fruitcarrot.jpeg',
 	},
 	{
-		name: "pineapple",
+		name: 'pineapple',
 		price: 15,
-		imageUrl: "/menu/fruitpineapple.jpeg",
+		imageUrl: '/menu/fruitpineapple.jpeg',
 	},
 	{
-		name: "orange",
+		name: 'orange',
 		price: 15,
-		imageUrl: "/menu/fruitorange.jpeg",
+		imageUrl: '/menu/fruitorange.jpeg',
 	},
 ].map((obj, index) => ({ id: index + 1, ...obj }))
 
-
 export const products = [
 	{
-		name: "orange fresh",
-		categoryId: 1,
-		imageUrl: "/menu/freshorange.jpeg",
+		name: 'cakebluebarry',
+		categoryId: 2,
+		imageUrl: '/menu/cakebluebarry.png',
 	},
 	{
-		name: "grapefruit fresh",
-		categoryId: 1,
-		imageUrl: "/menu/freshgrapefruit.jpeg",
+		name: 'cakecheese',
+		categoryId: 2,
+		imageUrl: '/menu/cakecheese.png',
 	},
 	{
-		name: "pineapple fresh",
-		categoryId: 1,
-		imageUrl: "/menu/freshpineapple.jpeg",
+		name: 'cakechoco',
+		categoryId: 2,
+		imageUrl: '/menu/cakechoco.png',
 	},
 	{
-		name: "apple carrot mix",
-		categoryId: 1,
-		imageUrl: "/menu/mixapplecarrot.png",
+		name: 'cakechocobanan',
+		categoryId: 2,
+		imageUrl: '/menu/cakechocobanan.png',
 	},
 	{
-		name: "apple kiwi mix",
-		categoryId: 1,
-		imageUrl: "/menu/mixapplekiwi.png",
+		name: 'cakechocomilk',
+		categoryId: 2,
+		imageUrl: '/menu/cakechocomilk.png',
+	},
+	{
+		name: 'cakefruite',
+		categoryId: 2,
+		imageUrl: '/menu/cakefruite.png',
+	},
+	{
+		name: 'cakepich',
+		categoryId: 2,
+		imageUrl: '/menu/cakepich.png',
+	},
+	{
+		name: 'cakepotato',
+		categoryId: 2,
+		imageUrl: '/menu/cakepotato.png',
+	},
+	{
+		name: 'cakepudra',
+		categoryId: 2,
+		imageUrl: '/menu/cakepudra.png',
+	},
+	{
+		name: 'cakeraspberry',
+		categoryId: 2,
+		imageUrl: '/menu/cakeraspberry.png',
+	},
+	{
+		name: 'cakewarmmilk',
+		categoryId: 2,
+		imageUrl: '/menu/cakewarmmilk.png',
+	},
+	{
+		name: 'dessertcandy',
+		categoryId: 2,
+		imageUrl: '/menu/dessertcandy.png',
+	},
+	{
+		name: 'dessertcruasunt',
+		categoryId: 2,
+		imageUrl: '/menu/dessertcruasunt.png',
+	},
+	{
+		name: 'dessertmussfruite',
+		categoryId: 2,
+		imageUrl: '/menu/dessertmussfruite.png',
+	},
+	{
+		name: 'dessertmussfruite',
+		categoryId: 2,
+		imageUrl: '/menu/dessertmussfruite.png',
+	},
+	{
+		name: 'cafecapuchino',
+		categoryId: 3,
+		imageUrl: '/menu/cafecapuchino.png',
+	},
+	{
+		name: 'cafeespresso',
+		categoryId: 3,
+		imageUrl: '/menu/cafeespresso.png',
 	},
 ]
