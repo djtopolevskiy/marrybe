@@ -1,10 +1,8 @@
 export const categories = [
-	{
-		name: "freshdrinks",
-	},
-	{ name: "cakes"},
-	{ name: "cafes"},
-	{ name: "desserts"},
+	{ name: "freshdrinks" },
+	{ name: "cakes" },
+	{ name: "cafes" },
+	{ name: "desserts" },
 ]
 
 export const ingredients = [
@@ -32,8 +30,8 @@ export const ingredients = [
 		name: "orange",
 		price: 15,
 		imageUrl: "/menu/fruitorange.jpeg",
-	}
-].map((obj, index) =>({id: index + 1, ...obj}))
+	},
+].map((obj, index) => ({ id: index + 1, ...obj }))
 
 export const productsFresh = [
 	{
@@ -61,8 +59,6 @@ export const productsFresh = [
 		category: 1,
 		imageUrl: "/menu/freshpineapple.jpeg",
 	},
-
-
 	{
 		name: "apple carrot mix",
 		category: 1,
@@ -72,5 +68,5 @@ export const productsFresh = [
 		name: "apple kiwi mix",
 		category: 1,
 		imageUrl: "/menu/mixapplekiwi.png",
-	},	
+	},
 ]

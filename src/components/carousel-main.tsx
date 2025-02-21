@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/carousel"
 import Image from "next/image"
 
-const mainboard: Array<string> = [
+const mainboard: string[] = [
 	"mainboard_1.png",
 	"mainboard_2.png",
 	"mainboard_3.png",
@@ -39,8 +39,8 @@ export function CarouselMain() {
 							<Card className='border-none bg-transparent shadow-none'>
 								<CardContent className='flex aspect-square items-center justify-center p-6'>
 									<Image
-										src={`/mainboard/mainboard_${index + 1}.png`}
-										alt={`Image ${index + 1}`}
+										src={`/mainboard/${image}`}
+										alt={image}
 										className='rounded-2xl mb-4 border-[3px] border-foreground w-full h-full object-cover object-center'
 										width={1000}
 										height={1000}
