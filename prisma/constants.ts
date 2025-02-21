@@ -33,40 +33,31 @@ export const ingredients = [
 	},
 ].map((obj, index) => ({ id: index + 1, ...obj }))
 
-export const productsFresh = [
-	{
-		name: "apple fresh",
-		category: 1,
-		imageUrl: "/menu/freshapple.png",
-	},
-	{
-		name: "carrot fresh",
-		category: 1,
-		imageUrl: "/menu/freshcarrot.jpeg",
-	},
+
+export const products = [
 	{
 		name: "orange fresh",
-		category: 1,
+		categoryId: 1,
 		imageUrl: "/menu/freshorange.jpeg",
 	},
 	{
 		name: "grapefruit fresh",
-		category: 1,
+		categoryId: 1,
 		imageUrl: "/menu/freshgrapefruit.jpeg",
 	},
 	{
 		name: "pineapple fresh",
-		category: 1,
+		categoryId: 1,
 		imageUrl: "/menu/freshpineapple.jpeg",
 	},
 	{
 		name: "apple carrot mix",
-		category: 1,
+		categoryId: 1,
 		imageUrl: "/menu/mixapplecarrot.png",
 	},
 	{
 		name: "apple kiwi mix",
-		category: 1,
+		categoryId: 1,
 		imageUrl: "/menu/mixapplekiwi.png",
 	},
 ]

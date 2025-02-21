@@ -3,8 +3,8 @@ export default function BackgroundGrid() {
 		<div className='pointer-events-none absolute inset-0 z-0 select-none '>
 			{/* Vertical lines */}
 			<div className='absolute inset-0 flex justify-between'>
-				{Array(5)
-					.fill(0)
+				{(Array(5) as string[])
+					.fill('0')
 					.map((_, i) => (
 						<div
 							key={i}
@@ -15,8 +15,8 @@ export default function BackgroundGrid() {
 
 			{/* Horizontal lines */}
 			<div className='absolute inset-0 flex flex-col justify-between'>
-				{Array(10)
-					.fill(0)
+				{(Array(10)as string[])
+					.fill('0')
 					.map((_, i) => (
 						<div
 							key={i}

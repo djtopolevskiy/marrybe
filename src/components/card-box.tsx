@@ -20,8 +20,8 @@ export function CarouselCard() {
 				Most popular products
 			</h2>
 			<CarouselContent>
-				{Array.from({ length: 5 })
-					.fill(0)
+				{Array.from({ length: 5 } as string[])
+					.fill('0')
 					.map((_, index) => (
 						<CarouselItem key={index} className='md:basis-1/2 lg:basis-1/3 '>
 							<div className='p-1'>
