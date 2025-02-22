@@ -1,7 +1,16 @@
-import { Prisma } from '@prisma/client'
 import { hashSync } from 'bcrypt'
 import { categories, ingredients, products } from './constants'
 import { prisma } from './prisma-client'
+
+export type ProductItemProps = {
+	id?: number
+	price: number
+	size?: number | null
+	productId?: number | null
+	createdAt?: Date | string
+	updatedAt?: Date | string
+	CartItem?: unknown
+}
 
 const randomNumber = (min: number, max: number) => {
 	return Math.floor(Math.random() * (max - min) * 10 + min * 10)
@@ -18,7 +27,7 @@ const generateProductItem = ({
 		productId,
 		price: randomNumber(10, 30),
 		size,
-	} as Prisma.ProductItemUncheckedCreateInput
+	} as ProductItemProps
 }
 
 async function up() {
