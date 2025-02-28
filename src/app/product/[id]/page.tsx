@@ -1,13 +1,12 @@
 import ThreeDCardProduct from '@/components/3d-card-product'
 import { Container } from '@/components/container'
-import { notFound } from 'next/navigation'
+import { notFound, useParams } from 'next/navigation'
 import { prisma } from '../../../../prisma/prisma-client'
 
-export default async function ProductPage({
-	params: { id },
-}: {
-	params: { id: string }
-}) {
+export default async function ProductPage() {
+	const params = useParams()
+	const id = params.id as string
+
 	const product = await prisma.product.findFirst({
 		where: { id: Number(id) },
 		include: {
