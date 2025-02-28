@@ -1,3 +1,5 @@
+'use client'
+
 import ThreeDCardProduct from '@/components/3d-card-product'
 import { Container } from '@/components/container'
 import { notFound, useParams } from 'next/navigation'
