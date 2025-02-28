@@ -21,8 +21,10 @@ export const Autoplay = () => {
 						<Image
 							src={image}
 							alt={`Slide ${index}`}
-							width={500}
-							height={300}
+							className='w-full h-full object-cover object-center'
+							priority={false}
+							width={1000}
+							height={1000}
 						/>
 					</Carousel.Item>
 				))}
