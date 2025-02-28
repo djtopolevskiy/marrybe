@@ -1,11 +1,13 @@
-import { CarouselMain } from './carousel-main'
+import { Autoplay } from './carousel'
+import { TitleH1 } from './title-motion/title-h1'
 
 export function BodyMain() {
 	return (
-		<div className="flex flex-col items-center justify-center px-4 w-full z-10 mt-[4rem]">
-			<h1 className="text-4xl text-center font-bold pt-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-gradient-x">Твоє улюблене кафе!</h1>
-			<CarouselMain />
-						
+		<div className='overflow-hidden flex flex-col items-center justify-center  w-full h-auto z-10 relative'>
+			<TitleH1>Твоє улюблене кафе!</TitleH1>
+			<section className='overflow-hidden scroll-smooth pointer-events-none flex w-full h-auto relative top-[-24px]'>
+				<Autoplay />
+			</section>
 		</div>
 	)
-}                                                                                    
+}

@@ -1,23 +1,23 @@
-"use client"
-import Autoplay from "embla-carousel-autoplay"
-import * as React from "react"
+'use client'
+import Autoplay from 'embla-carousel-autoplay'
+import * as React from 'react'
 
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from '@/components/ui/card'
 import {
 	Carousel,
 	CarouselContent,
 	CarouselItem,
 	CarouselNext,
 	CarouselPrevious,
-} from "@/components/ui/carousel"
-import Image from "next/image"
+} from '@/components/ui/carousel'
+import Image from 'next/image'
 
 const mainboard: string[] = [
-	"mainboard_1.png",
-	"mainboard_2.png",
-	"mainboard_3.png",
-	"mainboard_4.png",
-	"mainboard_5.png",
+	'mainboard_1.png',
+	'mainboard_2.png',
+	'mainboard_3.png',
+	'mainboard_4.png',
+	'mainboard_5.png',
 ]
 
 export function CarouselMain() {
@@ -42,6 +42,7 @@ export function CarouselMain() {
 										src={`/mainboard/${image}`}
 										alt={image}
 										className='rounded-2xl mb-4 border-[3px] border-foreground w-full h-full object-cover object-center'
+										priority={false}
 										width={1000}
 										height={1000}
 									/>

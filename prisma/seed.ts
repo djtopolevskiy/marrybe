@@ -12,7 +12,7 @@ const generateProductItem = ({
 	size,
 }: {
 	productId: number
-	size: 500 | 700
+	size?: 500 | 700
 }) => {
 	return {
 		productId,
@@ -133,7 +133,50 @@ async function up() {
 			generateProductItem({ productId: appleCarrotMix.id, size: 700 }),
 			generateProductItem({ productId: appleKiwiMix.id, size: 500 }),
 			generateProductItem({ productId: appleKiwiMix.id, size: 700 }),
+			generateProductItem({ productId: 1 }),
+			generateProductItem({ productId: 2 }),
+			generateProductItem({ productId: 3 }),
+			generateProductItem({ productId: 4 }),
+			generateProductItem({ productId: 5 }),
+			generateProductItem({ productId: 6 }),
+			generateProductItem({ productId: 7 }),
+			generateProductItem({ productId: 8 }),
+			generateProductItem({ productId: 9 }),
+			generateProductItem({ productId: 10 }),
+			generateProductItem({ productId: 11 }),
+			generateProductItem({ productId: 12 }),
+			generateProductItem({ productId: 13 }),
+			generateProductItem({ productId: 14 }),
+			generateProductItem({ productId: 15 }),
+			generateProductItem({ productId: 16 }),
+			generateProductItem({ productId: 17 }),
 		],
+	})
+
+	await prisma.cart.createMany({
+		data: [
+			{
+				userId: 1,
+				totalAmount: 0,
+				token: 'abc',
+			},
+			{
+				userId: 2,
+				totalAmount: 0,
+				token: 'def',
+			},
+		],
+	})
+
+	await prisma.cartItem.create({
+		data: {
+			cartId: 1,
+			productItemId: 1,
+			quantity: 2,
+			ingredients: {
+				connect: [{ id: 3 }, { id: 4 }],
+			},
+		},
 	})
 }
 
@@ -142,6 +185,9 @@ async function down() {
 	await prisma.$executeRaw`TRUNCATE TABLE "Category" RESTART IDENTITY CASCADE ;`
 	await prisma.$executeRaw`TRUNCATE TABLE "Ingredient" RESTART IDENTITY CASCADE ;`
 	await prisma.$executeRaw`TRUNCATE TABLE "Product" RESTART IDENTITY CASCADE ;`
+	await prisma.$executeRaw`TRUNCATE TABLE "ProductItem" RESTART IDENTITY CASCADE ;`
+	await prisma.$executeRaw`TRUNCATE TABLE "Cart" RESTART IDENTITY CASCADE ;`
+	await prisma.$executeRaw`TRUNCATE TABLE "CartItem" RESTART IDENTITY CASCADE ;`
 }
 
 async function main() {
